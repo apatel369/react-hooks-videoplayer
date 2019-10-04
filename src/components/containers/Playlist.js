@@ -2,15 +2,15 @@ import React from 'react';
 import PlaylistHeader from '../PlaylistHeader';
 import PlaylistItems from '../containers/PlaylistItems';
 import NightMode from '../Nightmode';
-
+import StyledPlaylist from '../styles/StyledPlaylist';
 
 const PlayList = props => {
     return (
-        <React.Fragment>
+        <StyledPlaylist>
             <NightMode />
             <PlaylistHeader />
             <PlaylistItems />
-        </React.Fragment>
+        </StyledPlaylist>
     )  
 }
 

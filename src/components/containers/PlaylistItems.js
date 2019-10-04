@@ -1,12 +1,12 @@
 import React from 'react';
 import PlaylistItem from '../PlaylistItem';
+import StyledPlaylistitems from '../styles/StyledPlaylistitems';
 
-const PlayList = props => {
-    return (
-        <React.Fragment>
-            <PlaylistItem />
-        </React.Fragment>
-    )  
-}
 
-export default PlayList;
+const PlayListItems = props => (
+    <StyledPlaylistitems>
+         <PlaylistItem />
+    </StyledPlaylistitems>
+)
+
+export default PlayListItems;
