@@ -22,7 +22,7 @@ const themeLight = {
     bgcolorPlayed: "#7d9979",
     border: "1px solid #353535",
     borderPlayer: "none",
-    color: "#fff",
+    color: "#353535",
   }
 
 const WbnPlayer = ({ match, history, location }) => {
@@ -57,7 +57,8 @@ const WbnPlayer = ({ match, history, location }) => {
     }, [history, location.autoplay, match.params.activeVideo, state.activeVideo.id, state.videos]);
 
     const nightModeCallback = () => {
-
+        setState(prevState => 
+            ({...prevState, nightMode: !prevState.nightMode}));
     }
 
     const endCallback = () => {
