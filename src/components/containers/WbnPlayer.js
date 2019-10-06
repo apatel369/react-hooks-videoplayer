@@ -62,11 +62,22 @@ const WbnPlayer = ({ match, history, location }) => {
     }
 
     const endCallback = () => {
+       const videoId = match.params.activeVideo;
+       const currentVideoIndex = state.videos.findIndex(
+           video => video.id === videoId
+       );
 
+       const nextVideo = 
+        currentVideoIndex === state.videos.length - 1 ? 0 : currentVideoIndex + 1;
+
+        history.push({
+            pathname: `/${state.videos[nextVideo].id}`,
+            autoplay: false
+        })
     }
 
     const progressCallback = () => {
-
+        
     }
 
     return (
